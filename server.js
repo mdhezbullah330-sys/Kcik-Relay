@@ -10,6 +10,7 @@ const { attachClientSocket } = require('./lib/clientSocket');
 const healthRoutes = require('./routes/health');
 const actionRoutes = require('./routes/action');
 const guildsRoutes = require('./routes/guilds');
+const guildDetailRoutes = require('./routes/guildDetail');
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(healthRoutes);
 app.use(actionRoutes);
 app.use(guildsRoutes);
+app.use(guildDetailRoutes);
 
 const server = http.createServer(app);
 
