@@ -11,6 +11,7 @@ const healthRoutes = require('./routes/health');
 const actionRoutes = require('./routes/action');
 const guildsRoutes = require('./routes/guilds');
 const guildDetailRoutes = require('./routes/guildDetail');
+const searchMembersRoutes = require('./routes/searchMembers');
 
 const PORT = process.env.PORT || 3000;
 
@@ -20,6 +21,7 @@ app.use(healthRoutes);
 app.use(actionRoutes);
 app.use(guildsRoutes);
 app.use(guildDetailRoutes);
+app.use(searchMembersRoutes);
 
 const server = http.createServer(app);
 
